@@ -1,0 +1,66 @@
+{
+  "name": "conventional-commit-cli",
+  "version": "1.0.0",
+  "description": "Interactive CLI tool to auto-format git commit messages using conventional commits",
+  "main": "src/index.js",
+  "bin": {
+    "commit": "./bin/commit.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "node bin/commit.js",
+    "link": "npm link",
+    "unlink": "npm unlink -g conventional-commit-cli"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "conventional-commits",
+    "cli",
+    "git-commit",
+    "commit-message",
+    "conventional",
+    "semantic-release",
+    "changelog"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/conventional-commit-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/conventional-commit-cli/issues"
+  },
+  "homepage": "https://github.com/yourusername/conventional-commit-cli#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "inquirer": "^8.2.5",
+    "simple-git": "^3.19.0",
+    "boxen": "^5.1.2",
+    "ora": "^5.4.1",
+    "cosmiconfig": "^8.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}
